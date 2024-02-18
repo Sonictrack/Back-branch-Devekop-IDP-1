@@ -1,0 +1,7 @@
+#static_page h3, #static_page h2{
+    font-weight: 400;
+    color: #3963AB;
+}
+#static_page h2 a{
+    color: #3963AB;
+}

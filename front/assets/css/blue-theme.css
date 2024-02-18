@@ -1,0 +1,93 @@
+/*
+* Created by : AjiCreative
+* File: Blue theme styles
+*/
+
+.blue-theme #navbar {
+    background: #3963AB;
+}
+.blue-theme #navbar .btn-custom {
+    background: white;
+    color: #3963AB !important;
+}
+.blue-theme .navbar-custom .navbar-nav li a{
+    color: white;
+}
+.blue-theme .navbar-toggler {
+    color: #ffffff !important;
+}
+.blue-theme .login-tabs{
+    border: 1px solid #3963AB;
+}
+.blue-theme .login-tabs .nav-tabs .nav-link {
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: white;
+    color: #3963ab;
+    border-radius: 0;
+    border-bottom: 1px solid #3963ab;
+    border-right: 1px solid #3963ab;
+}
+.blue-theme .login-tabs .nav-tabs .nav-item.show .nav-link,
+.blue-theme .login-tabs .nav-tabs .nav-link.active{
+    background: #3963ab;
+    color: white;
+    border-bottom: 1px solid #3963ab;
+    border-right: 1px solid #3963ab;
+}
+.blue-theme .login-tabs .tab-content {
+    padding: 2rem 3rem;
+}
+.blue-theme .login-tabs .nav-tabs {
+    border-bottom: 0;
+}
+.blue-theme .login-tabs .btn{
+    box-shadow: none;
+}
+.blue-theme .login-tabs .form-btn{
+    background: #839dce;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    padding: 1rem;
+    border-radius: 0;
+}
+.blue-theme .login-tabs .form-btn:hover{
+    background: #3963ab;
+}
+.blue-theme .form label{
+    color: #555;
+    font-size: 14px;
+}
+.blue-theme h1, .blue-theme p{
+    color: #3963ab;
+}
+.bg-blue {
+  background-color: #3963ab;
+}
+.bg-blue h1{
+    color: white;
+}
+.blue-theme .bordered-box{
+    border: 1px solid #3963ab;
+    padding: 3rem;
+}
+.blue-theme .bt_animated:before{
+    background-color: #3963ab;
+}
+.blue-theme .form-link{
+    color: #3963ab;
+}
+.blue-theme .v-progress-linear__background,
+.blue-theme .v-progress-linear__determinate{
+    background: #3963ab;
+}
+.blue-theme .account-details-line .info_icon img{
+    border-color: #3963AB;
+}
+.blue-theme .account-details-line .form-control {
+    border: 1px dashed #afcafd;
+    color: #3963AB;
+}

@@ -1,0 +1,122 @@
+/*
+* Created by : AjiCreative
+* File: Pink theme styles
+*/
+
+.pink-theme #navbar {
+    background: #BB298C;
+}
+.pink-theme #navbar .btn-custom {
+    background: white;
+    color: #BB298C !important;
+}
+.pink-theme .navbar-custom .navbar-nav li a{
+    color: white;
+}
+.pink-theme .navbar-toggler {
+    color: #ffffff !important;
+}
+.pink-theme .login-tabs{
+    border: 1px solid #BB298C;
+}
+.pink-theme .login-tabs .nav-tabs .nav-link {
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: white;
+    color: #BB298C;
+    border-radius: 0;
+    border-bottom: 1px solid #BB298C;
+    border-right: 1px solid #BB298C;
+}
+.pink-theme .login-tabs .nav-tabs .nav-item.show .nav-link,
+.pink-theme .login-tabs .nav-tabs .nav-link.active{
+    background: #BB298C;
+    color: white;
+    border-bottom: 1px solid #BB298C;
+    border-right: 1px solid #BB298C;
+}
+.pink-theme .login-tabs .tab-content {
+    padding: 2rem 3rem;
+}
+.pink-theme .login-tabs .nav-tabs {
+    border-bottom: 0;
+}
+.pink-theme .login-tabs .btn{
+    box-shadow: none;
+}
+.pink-theme .login-tabs .form-btn{
+    background: #CB9FCA;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    padding: 1rem;
+    border-radius: 0;
+}
+.pink-theme .login-tabs .form-btn:hover{
+    background: #BB298C;
+}
+.pink-theme .form label{
+    color: #555;
+    font-size: 14px;
+}
+
+.pink-theme h1, .pink-theme p{
+    color: #BB298C;
+}
+.bg-pink{
+    background-color: #BB298C;
+}
+.bg-pink h1{
+    color: white;
+}
+
+.pink-theme .bordered-box{
+    border: 1px solid #BB298C;
+    padding: 3rem;
+}
+
+.pink-theme .footer-alt{
+    background-color: white;
+    border-top: 1px solid #bb298c;
+    border-bottom: 1px solid #bb298c;
+    color: #bb298c;
+}
+
+.footer-secondary {
+      background-color: white !important;
+    border-top: 1px solid #bb298c !important;
+    border-bottom: 1px solid #bb298c !important;
+    color: #bb298c !important;
+}
+.pink-theme footer * {
+    color: #bb298c !important;
+}
+.pink-theme footer .extra_links a {
+    color: #bb298c;
+}
+.pink-theme .bt_animated:before {
+    background: #bb298c;
+}
+
+.pink-theme .form-link{
+    color: #BB298C;
+}
+
+.pink-theme .v-progress-linear__background,
+.pink-theme .v-progress-linear__determinate{
+    background: #BB298C;
+}
+
+.pink-theme .account-details-line .info_icon img{
+    border-color: #BB298C;
+}
+.pink-theme .account-details-line .form-control {
+    border: 1px dashed #ffbdea;
+    color: #BB298C;
+}
+
+.pink-theme .border-bottom {
+      border-bottom: 1px solid #BB298C !important;
+}

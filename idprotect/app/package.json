@@ -1,0 +1,36 @@
+{
+  "name": "protectid-client",
+  "version": "1.0.0",
+  "description": "ID Protect",
+  "author": "ID Protect",
+  "private": true,
+  "scripts": {
+    "dev": "env-cmd -f ../../env/properties.env nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "apexcharts": "^3.20.2",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.4",
+    "cookieparser": "^0.1.0",
+    "google-maps-api-loader": "^1.1.1",
+    "moment": "^2.27.0",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.13.3",
+    "vue": "^2.6.10",
+    "vue-apexcharts": "^1.6.0",
+    "vue-cookie-law": "1.13.3",
+    "vue-credit-card-validation": "^0.1.9",
+    "vue-slide-up-down": "^1.7.2",
+    "vuelidate": "^0.7.5"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.13.3",
+    "@nuxt/typescript-build": "^2.0.0",
+    "fast-sass-loader": "^1.5.0",
+    "sass-loader": "^9.0.2"
+  }
+}

@@ -1,0 +1,913 @@
+{
+  "account": {
+    "check": {
+      "documentNumber": "Numéro du document recherché :",
+      "title": "VÉRIFIEZ UN DOCUMENT",
+      "subtitle": "Utilisez notre moteur de recherche pour vérifier qu’un document n’a pas été déclaré perdu ou volé.",
+      "options": [
+        {
+          "imgSrc": "id_card",
+          "placeholder": "880692310285",
+          "title": "id",
+          "type": "id"
+        },
+        {
+          "imgSrc": "passport",
+          "placeholder": "59RF05400",
+          "title": "passport",
+          "type": "passeport"
+        },
+        {
+          "imgSrc": "driving-licence",
+          "placeholder": "750104100001",
+          "title": "driverLicence",
+          "type": "permis"
+        }, 
+        {
+          "imgSrc": "residence_permit",
+          "placeholder": "5903000242",
+          "title": "residencePermit",
+          "type": "sejour"
+        }
+      ],
+      "response": {
+        "danger": "Attention, ce document a été déclaré perdu ou volé le {date}.<br/>Nous vous conseillons de ne pas contractualiser avec ce client et prendre contact avec ID PROTECT.",
+        "success": "A ce jour, ce document n’a pas été déclaré perdu/volé dans la base de données ID PROTECT.",
+        "locked": "Ce document est temporairement bloqué par son propriétaire."
+      },
+      "button": {
+        "bgColor": "secondary",
+        "textColor": "text-white",
+        "title": "Rechercher un document"
+      }
+    },
+    "edit": {
+      "subtitle": "Sur cet espace, gérez les paramètres de votre compte ID PROTECT",
+      "title": "VOTRE COMPTE ID PROTECT",
+      "data": {
+        "col1": [
+          {
+            "icon": "solid-calendar-icon",
+            "iconColor": "white",
+            "model": "createdAt",
+            "title": "Date de création du compte"
+          },
+          {
+            "icon": "solid-user-icon",
+            "iconColor": "white",
+            "model": "getFullName",
+            "title": "Utilisateur",
+            "update": [
+              "firstname",
+              "lastname"
+            ]
+          },
+          {
+            "icon": "solid-database-icon",
+            "iconColor": "white",
+            "model": "sizeSpaceUsed",
+            "title": "Espace de stockage disponible",
+            "info": {
+              "path": "openModal",
+              "modalName": "size-space-modal"
+            },
+            "modal": {
+              "title": "Modification capacité de stockage",
+              "description": "Veuillez contacter le service client d’ID Protect pour augmenter la capacité de stockage.",
+              "button": {
+                "bgColor": "orangeButton",
+                "textColor": "text-white",
+                "title": "Vers la page de contact"
+              }
+            }
+          }
+        ],
+        "col2": [
+          {
+            "icon": "solid-hashtag-icon",
+            "iconColor": "white",
+            "model": "clientNumber",
+            "title": "Numéro du compte"
+          },
+          {
+            "icon": "solid-mail-icon",
+            "iconColor": "white",
+            "model": "email",
+            "title": "Adresse mail",
+            "info": {
+              "path": "openModal",
+              "modalName": "update-email-modal"
+            },
+            "modal": {
+              "title": "Modification email d'utilisateur",
+              "description": "Veuillez contacter le service client d’ID Protect pour changer l'adresse email.",
+              "button": {
+                "bgColor": "orangeButton",
+                "textColor": "text-white",
+                "title": "Vers la page de contact"
+              }
+            }
+          },
+          {
+            "condition": "isPro",
+            "icon": "solid-office-building-icon",
+            "iconColor": "white",
+            "model": "companyName",
+            "title": "Entreprise"
+          }
+        ]
+      },
+      "buttons": {
+        "deleteProfile": {
+          "bgColor": "white",
+          "title": "Supprimer mon compte",
+          "modal": {
+            "title": "Voulez vous supprimer votre compte?",
+            "description": "Supprimer votre compte est une action irréversible.<br/>Cette action supprimera votre carte d'identité de la base de donnée.<br/>Etes-vous sûr de vouloir supprimer votre compte ?<br/>Si oui, rentrez la phrase suivante, en respectant les majuscules :<br/>",
+            "sentence": "Je souhaite supprimer mon compte"
+          }
+        },
+        "updateProfile": {
+          "textColor": "text-white",
+          "title": "Modifier mon profil"
+        }
+      }
+    },
+    "folder": {
+      "title": "VOS DOSSIERS ID PROTECT",
+      "warning": "Seule l’équipe ID Protect peut accéder à vos documents téléchargés sur ce dossier.",
+      "none": "Vous n'avez aucun dossier.",
+      "upload": {
+        "buttons": [
+          {
+            "action": "sendDocument",
+            "bgColor": "success",
+            "icon": "solid-arrow-circle-up-icon",
+            "iconColor": "white",
+            "textColor": "text-white",
+            "title": "Envoyer"
+          },
+          {
+            "action": "cancel",
+            "bgColor": "red",
+            "icon": "solid-ban-icon",
+            "iconColor": "white",
+            "textColor": "text-white",
+            "title": "Annuler"
+          }
+        ],
+        "file": "Fichiers à télécharger",
+        "title": "Ajouter un document dans {name}",
+        "visibility": {
+          "title": "Visibilité du dossier",
+          "options": [
+            {
+              "title": "Visible",
+              "value": true
+            },
+            {
+              "title": "Non visible",
+              "value": false
+            }
+          ]
+        }
+      },
+      "buttons": [
+        {
+          "action": "addDocument",
+          "bgColor": "primary",
+          "icon": "solid-plus-icon",
+          "iconColor": "white",
+          "textColor": "text-white",
+          "title": "Ajouter un document"
+        }
+      ]
+    },
+    "header": {
+      "description": "Bienvenue dans votre espace membre",
+      "notifications": {
+        "none": "Vous n'avez aucune notification.",
+        "title": "Vos dernières notifications"
+      },
+      "subtitle": "Gérez vos demandes, téléchargez vos justificatifs et protégez vos documents.",
+      "title": "Bonjour, {name}"
+    },
+    "request": {
+      "description": "Retrouvez vos demandes et téléchargez vos justificatifs dans votre dossier sécurisé ID PROTECT.",
+      "title": "VOS DEMANDES ID PROTECT",
+      "none": "Vous n'avez fait aucune demande.",
+      "buttons": {
+        "perte": {
+          "bgColor": "primary",
+          "textColor": "text-white",
+          "icon": "solid-plus-icon",
+          "iconColor": "white",
+          "title": "Déclarer une perte / vol",
+          "path": "/particuliers/perte-ou-vol"
+        },
+        "renew": {
+          "bgColor": "primary",
+          "textColor": "text-white",
+          "icon": "solid-plus-icon",
+          "iconColor": "white",
+          "title": "Renouvellement",
+          "path": "/renouvellement"
+        }
+      }
+    }
+  },
+  "confirmation": {
+    "error": {
+      "description": "Désolé, votre compte n'a pas pu être vérifié. Merci de nous contacter",
+      "title": "Oups ! Il y a eu une erreur...",
+      "button": {
+        "bgColor": "white",
+        "textColor": "text-red",
+        "title": "Nous contacter",
+        "path": "/contact"
+      }
+    },
+    "success": {
+      "description": "Le compte a bien été vérifié, vous pouvez à présent vous connecter.",
+      "title": "Bravo ! Votre compte est confirmé.",
+      "button": {
+        "bgColor": "white",
+        "textColor": "text-success",
+        "title": "Me connecter à mon compte",
+        "path": "/particuliers/login"
+      }
+    }
+  },
+  "contact": {
+    "header": {
+      "description": "Contactez-nous !",
+      "title": "Vous souhaitez avoir plus d’information sur nos services ou<br>vous renseigner sur la protection de votre identité ?"
+    },
+    "content": {
+      "component": "RequestStep",
+      "steps": [
+        {
+          "icon": "solid-mail-icon",
+          "iconColor": "white",
+          "description": "Nous vous répondrons par email dans un délais de 2 jours ouvrés.",
+          "button": {
+            "bgColor": "primary",
+            "textColor": "text-white",
+            "title": "Nous écrire",
+            "path": "openModal",
+            "modalName": "contact-modal"
+          }
+        }, 
+        {
+          "icon": "solid-phone-icon",
+          "iconColor": "white",
+          "description": "Contactez-nous par téléphone du lundi au vendredi de 10h à 17h.",
+          "button": {
+            "bgColor": "primary",
+            "textColor": "text-white",
+            "title": "+331 84 20 74 26"
+          }
+        }
+      ]
+    },
+    "note": "Suivez également les conseils de nos experts sur les réseaux sociaux."
+  },
+  "declare": {
+    "confirmation": {
+      "description": "Vous trouverez votre confirmation de demande dans votre boîte mail. Suivez l’avancée de votre dossier dans votre espace membre.",
+      "title": "Votre demande a été enregistrée.",
+      "button": {
+        "bgColor": "white",
+        "textColor": "text-success",
+        "title": "Mon espace membre",
+        "path": "/particuliers/espace-client"
+      }
+    },
+    "lost": {
+      "steps": [
+        {
+          "name": "Documents",
+          "id": 1,
+          "component": "AccountFileDeclareLost"
+        },
+        {
+          "name": "Paiement",
+          "id": 2,
+          "component": "AccountPaymentModule"
+        },
+        {
+          "name": "Confirmation",
+          "id": 3,
+          "component": "AccountPaymentConfirmation"
+        }
+      ],
+      "buttons": {
+        "confirm": {
+          "bgColor": "primary",
+          "textColor": "text-white",
+          "title": "Continuer"
+        },
+        "cancel": {
+          "bgColor": "red",
+          "textColor": "text-white",
+          "title": "Annuler"
+        }
+      }
+    },
+    "loggedIn": {
+      "options": [
+        {
+          "imgSrc": "id_card",
+          "placeholder": "880692310285",
+          "title": "id",
+          "type": "id"
+        },
+        {
+          "imgSrc": "passport",
+          "placeholder": "59RF05400",
+          "title": "passport",
+          "type": "passport"
+        },
+        {
+          "imgSrc": "driving-licence",
+          "placeholder": "750104100001",
+          "title": "driverLicence",
+          "type": "driving-licence"
+        },
+        {
+          "imgSrc": "residence_permit",
+          "placeholder": "5903000242",
+          "title": "residencePermit",
+          "type": "sejour"
+        }
+      ],
+      "title": "Gestion de mes documents perdus ou volés",
+      "subtitle": "Vous pouvez ici effectuer vos demandes de pertes de documents perdus ou volés en attachant à votre demande les pièces demandées comme la copie du document et le proces verbal.",
+      "button": {
+        "bgColor": "primary",
+        "textColor": "text-white",
+        "title": "Déclarer la perte"
+      }
+    },
+    "notLoggedIn": {
+      "title": "Déclarer une perte ou un vol",
+      "subtitle": "Votre protection en quelques clics !",
+      "warning": "Si vous souhaitez déclarer une perte ou un vol, vous devez créer un compte ou vous connecter"
+    }
+  },
+  "errors": {
+    "common": "Une erreur est survenue, veuillez nous excuser.",
+    "form": {
+      "firstName": "Entrez votre prénom.",
+      "lastName": "Entrez votre nom.",
+      "mail": "Entrez une adresse e-mail valide.",
+      "letter": "Votre mot de passe doit comporter au moins une lettre.",
+      "number": "Votre mot de passe doit comporter au moins un chiffre.",
+      "password": "8 caractères minimum.",
+      "passwordConfirm": "Vos mots de passes doivent correspondre.",
+      "phone": "Numéro de téléphone incorrecte.",
+      "mailLogin": "Entrez une adresse e-mail valide.",
+      "passwordLogin": "8 caractères minimum.",
+      "companyName": "Entrez le nom de vitre entreprise",
+      "errorFirstName": "Prénom invalide",
+      "errorLastName": "Nom invalide",
+      "errorCompanyName": "Nom d'entreprise invalide",
+      "errorLength": "Minimum 1 caractère."
+    },
+    "login": {
+      "400": "Désolé, une erreur est survenue côté serveur. Veuillez réessayer.",
+      "401": "Email ou mot de passe incorrect.",
+      "404": "Désolé, une erreur est survenue côté serveur. Veuillez réessayer.",
+      "500": "Désolé, une erreur est survenue côté serveur. Veuillez réessayer.",
+      "504": "Désolé, le serveur n'a pas répondu. Veuillez réessayer."
+    },
+    "perte": {
+      "413": "Le fichier que vous tentez d'uploader est trop lourd."
+    },
+    "required": "Requis.",
+    "upload": {
+      "413": "Le(s) fichier(s) que vous tentez d'uploader sont trop lourds.",
+      "503": "Le(s) fichier(s) que vous tentez d'uploader sont trop lourds."
+    }
+  },
+  "footer": {
+    "title": "ID PROTECT",
+    "copyrights": "ID PROTECT tout droits réservés",
+    "navOptions": {
+      "cgu": {
+        "path": "/cgu",
+        "title": "CGU"
+      },
+      "legal": {
+        "path": "/legal",
+        "title": "Mentions légales"
+      },
+      "policy": {
+        "path": "/policy",
+        "title": "Politique de confidentialité"
+      },
+      "contact": {
+        "path": "/contact",
+        "title": "Contact"
+      }
+    }
+  },
+  "general": {
+    "cancel": "Annuler",
+    "date": "Date",
+    "delete": "Supprimer",
+    "driverLicence": "Permis",
+    "document": "Document d'identité",
+    "download": "Télécharger",
+    "id": "Carte d'identité",
+    "info": "Information",
+    "individual": "particuliers",
+    "partner": "professionnels",
+    "passport": "Passeport",
+    "requests": "Mes demandes",
+    "name": "Nom",
+    "number": "Numéro",
+    "pv": "Procès verbal",
+    "save": "Enregistrer",
+    "status": "Status",
+    "type": "Type",
+    "upload": "Charger",
+    "residencePermit": "Carte de séjour"
+  },
+  "landing": {
+    "header": {
+      "description": "ID Protect prévient l’usurpation d’identité grâce à des outils innovants. Particuliers, protégez vos documents et facilitez vos démarches en ligne. Professionnels, prévenez facilement les cas d’usurpation.",
+      "subtitle": "Votre identité, notre priorité",
+      "title": "ID PROTECT",
+      "buttons": {
+        "part": {
+          "bgColor": "bg-white",
+          "textColor": "text-primary",
+          "iconColor": "primary",
+          "icon": "solid-user-icon",
+          "path": "/particuliers/login",
+          "title": "Particuliers"
+        },
+        "pro": {
+          "bgColor": "bg-white",
+          "textColor": "text-primary",
+          "iconColor": "primary",
+          "icon": "solid-office-building-icon",
+          "path": "/professionnels/login",
+          "title": "Professionnels"
+        }
+      }
+    },
+    "particulier": {
+      "col1": {
+        "background": "bg1",
+        "textColor": "text-primary",
+        "description": "<p>Quelles que soient les démarches que vous avez besoin d’effectuer, ID Protect a pour objectif de vous protéger sur le long terme.</p><p>Renouvellement d’un document officiel en cas de fin de validité, de perte ou de vol, protection face à l’usurpation : chaque situation est unique et demande un accompagnement sur mesure.</p>",
+        "subtitle": "Particuliers",
+        "title": "01.",
+        "button": {
+          "bgColor": "primary",
+          "textColor": "text-white",
+          "title": "Je m'inscris",
+          "path": "/particuliers/login"
+        }
+      },
+      "col2": {
+        "sub-col-1": {
+          "alt": "renouveler un document d'identité",
+          "image": "process",
+          "textColor": "text-primary",
+          "description": "Votre document est arrivé à expiration ? Il a été perdu ou volé ? Prévenez l’utilisation frauduleuse et simplifiez vos démarches avec ID Protect !",
+          "title": "Vous souhaitez renouveler un document d’identité ?",
+          "button": {
+            "bgColor": "primary",
+            "textColor": "text-white",
+            "title": "Faites une demande",
+            "path": "/demandes"
+          }
+        },
+        "sub-col-2": {
+          "alt": "Soupçonnez une utilisation frauduleuse de vos documents",
+          "image": "shield",
+          "background": "bg-primary",
+          "textColor": "text-white",
+          "description": "Echangez avec nos experts et utilisez nos outils pour prévenir une usurpation.",
+          "title": "Vous soupçonnez une utilisation frauduleuse de vos documents ?",
+          "button": {
+            "bgColor": "white",
+            "textColor": "text-primary",
+            "title": "Contactez-nous",
+            "path": "/contact"
+          }
+        }
+      }
+    },
+    "professionnel": {
+      "col1": {
+        "background": "bg1",
+        "textColor": "text-secondary",
+        "description": "Notre consultant juridique a développé une expertise dans le domaine de la vérification des documents d’identité pour les entreprises de services telles que les banques et a ainsi pu recenser les pratiques utilisées par les faussaires afin de mieux vous en protéger.",
+        "subtitle": "Professionnels",
+        "title": "02.",
+        "button": {
+          "bgColor": "secondary",
+          "textColor": "text-white",
+          "title": "Je m'inscris",
+          "path": "professionnels/login"
+        }
+      },
+      "col2": {
+        "sub-col-1": {
+          "alt": "renouveler un document d'identité",
+          "image": "eye",
+          "textColor": "text-secondary",
+          "description": "ID Protect est le seul organisme à recenser les documents déclarés perdus ou volés.",
+          "title": "Détectez l’utilisation frauduleuse de documents qui auraient été perdus ou volés !",
+          "button": {
+            "bgColor": "secondary",
+            "textColor": "text-white",
+            "title": "Vérifiez un document",
+            "path": "/professionnels/login"
+          }
+        },
+        "sub-col-2": {
+          "alt": "Soupçonnez une utilisation frauduleuse de vos documents",
+          "image": "check",
+          "background": "bg-secondary",
+          "textColor": "text-white",
+          "description": "Notre expert analyse les documents d’identité qui vous sont présentés.",
+          "title": "Vous souhaitez vous assurer de la validité des documents qui vous sont présentés ?",
+          "button": {
+            "bgColor": "white",
+            "textColor": "text-secondary",
+            "title": "Demandez une expertise",
+            "path": "/contact"
+          }
+        }
+      }
+    },
+    "community": {
+      "description": "Découvrez les bonnes pratiques de nos experts, nos articles et les témoignages de victimes d’usurpation.",
+      "title": "Vous souhaitez mieux maîtriser vos données ?",
+      "button": {
+        "bgColor": "orangeButton",
+        "textColor": "text-white",
+        "title": "COMMUNITY",
+        "path": "https://community.idprotect.fr/id-protect/"
+      }
+    }
+  },
+  "login": {
+    "buttons": {
+      "login": "Se connecter",
+      "signin": "S'inscrire"
+    },
+    "forgotten": {
+      "back": "Retour",
+      "title": "Entrez votre adresse e-mail ci-dessous pour récuperer votre mot de passe",
+      "button": {
+        "textColor": "text-white",
+        "title": "Envoyer"
+      }
+    },
+    "form": {
+      "describe": "Décrivez votre demande",
+      "firstName": "Prénom",
+      "forgotten": "Mot de passe oublié?",
+      "lastName": "Nom",
+      "number": "Numéro",
+      "companyName": "Nom de l'entreprise",
+      "numberOption": "Votre numéro si vous souhaitez être rappelé par un expert",
+      "password": "Mot de passe",
+      "passwordConfirm": "Confirmez le mot de passe",
+      "phone": "Téléphone",
+      "mail": "Adresse e-mail",
+      "mailLogin": "Adresse e-mail",
+      "passwordLogin": "Mot de passe"
+    },
+    "info": {
+      "notMember": "Vous n’êtes pas encore membre ?",
+      "subscribe": "<b>Inscrivez-vous</b> gratuitement !",
+      "subtitle": "Connectez-vous pour accéder à tous les services ID PROTECT.",
+      "title": "Espace {type}"
+    },
+    "tabs": {
+      "login": "Connexion",
+      "signin": "Inscription"
+    }
+  },
+  "payment": {
+    "images": [
+      "visa",
+      "cb",
+      "ae",
+      "mastercard",
+      "maestro"
+    ],
+    "title": "Moyens de paiement",
+    "subtitle": "Entrez ci-dessous un moyen de paiement sécurisé",
+    "button": {
+      "bgColor": "primary",
+      "textColor": "text-white",
+      "title": "Régler "
+    }
+  },
+  "menu": {
+    "navLoggedIn": {
+      "dashboard": {
+        "path": "/{type}/espace-client",
+        "title": "Tableau de bord"
+      },
+      "myDocuments": {
+        "path": "/particuliers/mes-documents",
+        "title": "Mes documents",
+        "userType": "individual"
+      },
+      "account": {
+        "path": "/{type}/compte",
+        "title": "Mon compte"
+      },
+      "logout": {
+        "path": "actionLogout",
+        "title": "Se déconnecter"
+      }
+    },
+    "navOptions": {
+      "question": {
+        "path": "/demandes",
+        "title": "Faire une demande"
+      },
+      "client": {
+        "path": "/particuliers/login",
+        "title": "Espace particuliers"
+      },
+      "pro": {
+        "path": "/professionnels/login",
+        "title": "Espace professionnels"
+      },
+      "contact": {
+        "path": "/contact",
+        "title": "Contact"
+      },
+      "community": {
+        "highlight": true,
+        "path": "https://community.idprotect.fr/id-protect/",
+        "title": "Community"
+      }
+    }
+  },
+  "modals": {
+    "contact": {
+      "description": "Vous avez besoin d’un renseignement, d’une aide en cas d’usurpation ?<br>Nos experts vous répondent par mail sous deux jours ouvrés.",
+      "title": "Contactez-nous !",
+      "inputs": {
+        "allowContact": "En cochant cette case j'accepte de recevoir des informations par mail de la part de ID PROTECT",
+        "allowPolicy": "En cochant cette case j'accepte <a href=''>la politique de confidentialité</a> ID PROTECT"
+      },
+      "button": {
+        "bgColor": "primary",
+        "textColor": "text-white",
+        "title": "Envoyer"
+      }
+    }
+  },
+  "password": {
+    "description": "Veillez bien à respecter le niveau de sécurité de votre mot de passe :<br/>- 8 caractères minimums.<br/>- Dont une lettre minuscule au minimum.<br/>- Dont une lettre majuscule au minimum.<br/>- Dont un chiffre au minimum.",
+    "title": "Changer votre mot de passe",
+    "button": {
+      "bgColor": "primary",
+      "textColor": "text-white",
+      "title": "Valider"
+    }
+  },
+  "renew": {
+    "title": "Renouvellement de document d'identité",
+    "subtitle": "Renseignez les champs ci-dessous pour effectuer votre démarche en ligne.",
+    "steps": [
+      {
+        "name": "Formulaire",
+        "id": 1,
+        "component": "RenewForm"
+      },
+      {
+        "name": "Paiement",
+        "id": 2,
+        "component": "AccountPaymentModule"
+      },
+      {
+        "name": "Confirmation",
+        "id": 3,
+        "component": "AccountPaymentConfirmation"
+      }
+    ]
+  },
+  "request": {
+    "presentation": {
+      "col1": {
+        "background": "bg_demandes",
+        "button": {
+          "bgColor": "primary",
+          "textColor": "text-white",
+          "title": "Nos tarifs",
+          "path": "scrollTo",
+          "scrollTo": "#tarifs"
+        },
+        "description": "<p>En cas de renouvellement, de perte ou de vol de document d’identité, les démarches administratives peuvent parfois être difficiles !</p><p>Sur notre plateforme, remplissez facilement votre formulaire de renouvellement et bénéficiez des vérifications de nos experts.</p>",
+        "subtitle": "facilite vos démarches",
+        "textColor": "text-primary",
+        "title": "ID PROTECT"
+      },
+      "col2": {
+        "sub-col-1": {
+          "textColor": "text-primary",
+          "description": "ID PROTECT simplifie votre demande et prend rendez-vous avec votre mairie. Nos experts assurent un suivi personnalisé par téléphone et s’assurent de la validité de votre dossier.",
+          "title": "Vous souhaitez renouveler un document d’identité ?",
+          "button": {
+            "bgColor": "primary",
+            "textColor": "text-white",
+            "title": "Commencer ma demande",
+            "path": "/renouvellement"
+          }
+        },
+        "sub-col-2": {
+          "background": "bg-primary",
+          "textColor": "text-white",
+          "description": "ID PROTECT est le seul organisme à recenser votre document afin que l’ensemble de ses partenaires détectent son utilisation par un usurpateur.",
+          "title": "Vous souhaitez prévenir l’utilisation frauduleuse d’un document perdu ou volé ?",
+          "button": {
+            "bgColor": "white",
+            "textColor": "text-primary",
+            "title": "Protéger un document",
+            "path": "/particuliers/perte-ou-vol"
+          }
+        }
+      }
+    },
+    "renew": {
+      "component": "RequestStep",
+      "title": "Demandes de renouvellement - 39,99€*",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Formulaire en ligne ID PROTECT",
+          "description": "Facilitez votre démarche en remplissant notre formulaire en ligne (6 minutes)."
+        },
+        {
+          "number": "2",
+          "title": "Prise en charge ID EXPERT",
+          "description": "Nos experts vérifient votre dossier et prennent contact avec vous sous 48 heures."
+        },
+        {
+          "number": "3",
+          "title": "Rendez-vous en mairie",
+          "description": "Nous vous réservons un rendez-vous dans la mairie ou vous aurez le moins d’attente."
+        },
+        {
+          "number": "4",
+          "title": "Retrait de votre document",
+          "description": "Vous êtes prévenu par SMS lorsque votre document est prêt !"
+        }
+      ],
+      "note": "*Pour renouveler un document d’identité, vous avez la possibilité de faciliter votre démarche en choisissant ID PROTECT. Vous bénéficierez de l’expertise de nos experts pour gagner du temps et obtenir un suivi personnalisé. Nos services sont facturés 39,99€, prix hors tarfis des timbres fiscaux en vigueur.<br>Vous pouvez également choisir de passer directement par les services de l'état disponibles sur la plateforme ANTS : <a href='https://ants.gouv.fr'>https://ants.gouv.fr</a> mais vous ne bénéficierez donc pas de l’expertise et de l’accompagnement ID PROTECT.",
+      "button": {
+        "bgColor": "primary",
+        "textColor": "text-white",
+        "title": "Commencer ma demande",
+        "path": "/renouvellement"
+      }
+    },
+    "prevention": {
+      "component": "RequestStep",
+      "title": "Prévention ID PROTECT contre la fraude - 9,99€",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Création d’un compte ID PROTECT",
+          "description": "Afin de protéger un document qui aurait été perdu ou volé, vous commencez par créer un compte sur notre plateforme."
+        },
+        {
+          "number": "2",
+          "title": "Protection de votre document",
+          "description": "Enregistrez une preuve de votre document. Seul le numéro sera conservé afin de permettre d’en détecter une utilisation frauduleuse."
+        },
+        {
+          "number": "3",
+          "title": "Notification en cas de tentative de fraude",
+          "description": "Nos partenaires vérifient les documents qui leur sont présentés sur notre plateforme. Vous êtes immediatement notifié dans votre espace membre si le document correspond au votre."
+        }
+      ],
+      "button": {
+        "bgColor": "primary",
+        "textColor": "text-white",
+        "title": "Protéger un document",
+        "path": "/particuliers/perte-ou-vol"
+      }
+    },
+    "prices": {
+      "component": "RequestCard",
+      "title": "Des tarifs simples, <br> une demande efficace !",
+      "steps": [
+        {
+          "path": "/renouvellement",
+          "bgColor": "bg-primary",
+          "textColor": "text-white",
+          "title": "Demande de <br> renouvellement",
+          "description": "- Création de la pré-demande auprès de l’ANTS<br>- Prise de rendez-vous en mairie<br>- Vérification du dossier<br>- Achat du timbre fiscal*<br>- Création d’un compte ID PROTECT<br>",
+          "price": "39,99 €"
+        },
+        {
+          "path": "/particuliers/perte-ou-vol",
+          "bgColor": "bg-primary",
+          "textColor": "text-white",
+          "title": "Protection d’un document <br> perdu ou volé",
+          "description": "Protégez votre document perdu ou volé en l’enregistrant sur la plateforme ID PROTECT.<br> Nos partenaires vérifient avant de fournir un service, que le document présenté n’a pas été déclaré perdu/volé.",
+          "price": "9,99 €"
+        },
+        {
+          "bgColor": "bg-white",
+          "textColor": "text-primary",
+          "title": "Tarifs des timbres fiscaux",
+          "description": "Les tarifs des timbres fiscaux varient en fonction du type de document et de l’âge du demandeur.<br><br>- Carte d’identité : gratuit ou 25€ en cas de perte du précédent document<br>- Passeport 18+ ans : 86€<br>- Passeport jeune 15-17 ans : 42€<br>- Passeport enfant 0-15 ans : 17€"
+        }
+      ]
+    }
+  },
+  "status": {
+    "EC": "En cours",
+    "ANN": "Annulé",
+    "VAL": "Validé",
+    "INFO": "Informé"
+  },
+  "success": {
+    "lostDocument": "Votre déclaration de perte a bien été enregistrée.",
+    "removeFile": "Vos fichiers ont bien été supprimés.",
+    "uploadFile": "Vos fichiers ont bien été téléchargés."
+  },
+  "badge": "Badge",
+  "close": "Fermer",
+  "dataIterator": {
+    "noResultsText": "Aucun enregistrement correspondant trouvé",
+    "loadingText": "`Chargement de l'élément...`"
+  },
+  "dataTable": {
+    "itemsPerPageText": "Lignes par page :",
+    "ariaLabel": {
+      "sortDescending": "Tri décroissant.",
+      "sortAscending": "Tri croissant.",
+      "sortNone": "Non trié.",
+      "activateNone": "Activer pour supprimer le tri.",
+      "activateDescending": "Activer pour trier par ordre décroissant.",
+      "activateAscending": "Activer pour trier par ordre croissant."
+    },
+    "sortBy": "Trier par"
+  },
+  "dataFooter": {
+    "itemsPerPageText": "Élements par page :",
+    "itemsPerPageAll": "Tous",
+    "nextPage": "Page suivante",
+    "prevPage": "Page précédente",
+    "firstPage": "Première page",
+    "lastPage": "Dernière page",
+    "pageText": "{0}-{1} de {2}"
+  },
+  "datePicker": {
+    "itemsSelected": "{0} sélectionné(s)",
+    "nextMonthAriaLabel": "Le mois prochain",
+    "nextYearAriaLabel": "`L'année prochaine`",
+    "prevMonthAriaLabel": "Le mois précédent",
+    "prevYearAriaLabel": "Année précédente"
+  },
+  "noDataText": "Aucune donnée disponible",
+  "carousel": {
+    "prev": "Visuel précédent",
+    "next": "Visuel suivant",
+    "ariaLabel": {
+      "delimiter": "Diapositive {0} de {1}"
+    }
+  },
+  "calendar": {
+    "moreEvents": "{0} de plus"
+  },
+  "fileInput": {
+    "counter": "{0} fichier(s)",
+    "counterSize": "{0} fichier(s) ({1} au total)"
+  },
+  "timePicker": {
+    "am": "AM",
+    "pm": "PM"
+  },
+  "pagination": {
+    "ariaLabel": {
+      "wrapper": "Navigation de pagination",
+      "next": "Page suivante",
+      "previous": "Page précédente",
+      "page": "Aller à la page {0}",
+      "currentPage": "Page actuelle, Page {0}"
+    }
+  },
+  "rating": {
+    "ariaLabel": {
+      "icon": "Rating {0} of {1}"
+    }
+  }
+}

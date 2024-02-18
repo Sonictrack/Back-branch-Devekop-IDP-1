@@ -1,0 +1,59 @@
+/*
+* Created by : AjiCreative
+* File: Espace Particuliers styles
+*/
+
+.blue-theme .account-details-line p:first-child{
+    font-weight: 700;
+}
+.blue-theme .account-details-line .icon-img {
+    background: #3963ab;
+    border-radius: 50%;
+    height: 40px !important;
+    max-width: 40px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+.blue-theme .account-details-line .icon-img img{
+    width: 50%;
+}
+.blue-theme .account-details-line p:nth-child(2){
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.pink-theme .account-details-line p:first-child{
+    font-weight: 700;
+}
+.pink-theme .account-details-line .icon-img {
+    background: #bb298c;
+    border-radius: 50%;
+    height: 40px !important;
+    max-width: 40px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+.pink-theme .account-details-line .icon-img img{
+    width: 50%;
+}
+.pink-theme .account-details-line p:nth-child(2){
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+@media (max-width: 425px){
+    .bordered-box {
+        padding: 1rem !important;
+    }
+    .account-details-line .icon-img{
+        margin-right: 1rem;
+    }
+}

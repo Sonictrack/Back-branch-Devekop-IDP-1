@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway'!important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.min-w-8 {
+  min-width: 40px;
+}
+
+.min-h-8 {
+  min-height: 40px;
+}
+
+.min-w-16 {
+  min-width: 75px;
+}
+
+.min-h-16 {
+  min-height: 75px;
+}
+
+.text-9 {
+  font-size: 9px;
+}
+
+.text-12 {
+  font-size: 12px;
+}
+
+.text-15 {
+  font-size: 15px;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+.text-56 {
+  font-size: 56px;
+}
+
+.z-index-full {
+  z-index: 998;
+}
+
+.text-left-lg {
+  text-align: left;
+}
+
+@media (max-width: 964px) {
+
+  .text-32 {
+    font-size: 26px;
+  }
+
+  .text-24 {
+    font-size: 18px;
+  }
+
+  .text-left-lg {
+    text-align: center;
+  }
+}
+
+.outline-none {
+  outline: none;
+  box-shadow: 0px solid;
+}
+
+/*Vuetify overide*/
+:root {
+  --blue: #3963AB !important;
+}
+.theme--light.v-application {
+    color: inherit !important;
+}
+.v-btn {
+  border-radius: 0 !important;
+}
+label.v-label.theme--light {
+  margin-bottom: 0!important;
+}
+
+.v-application {
+  font-family: inherit!important;
+}
+
+.v-application--wrap {
+  justify-content: space-between;
+}
+
+.v-tab--active {
+  color: white!important;
+}
+
+.v-tabs-slider-wrapper {
+  display: none
+}
+
+.theme--light.v-btn.v-btn--has-bg {
+  color: inherit!important;
+}
+
+.v-stepper__step--active > .theme--light.v-stepper .v-stepper__step__step {
+  background-color: #3963AB!important;
+}
+
+.v-messages.theme--light.error--text {
+  color: red!important;
+}
+
+/*Tailwind best inherit*/
+
+.h-screen {
+  height: calc(100vh - 65px)!important;
+}
+
+.mobile-h-screen {
+  min-height: 100vh!important;
+  height: 100vh!important;
+}
+
+@media (max-width: 964px) {
+  .h-screen{
+    height: auto;
+  }
+}
+
+.mx-auto {
+  margin: auto;
+}
+
+.line-height-1 {
+  line-height: 1.2;
+}
+
+/*Animations*/
+
+.slide-enter-active {
+  animation: slide-in 300ms ease-out forwards;
+}
+
+.slide-leave-active {
+  animation: slide-out 300ms ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideLeft-leave-active,
+.slideLeft-enter-active {
+  transition: 1s;
+}
+.slideLeft-enter {
+  transform: translate(100%, 0);
+}
+.slideLeft-leave-to {
+  transform: translate(-100%, 0);
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+/* button effect */
+
+button {
+  transition: all 0.5s;
+}
+
+button:hover {
+  transform: translateY(-5px);
+}

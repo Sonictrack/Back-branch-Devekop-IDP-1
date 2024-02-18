@@ -1,0 +1,108 @@
+/*
+* Created by : AjiCreative
+* File: Contact page style
+*/
+
+#contact-page .small-title {
+    font-size: 35px;
+    font-weight: 200;
+    margin-bottom: 3rem;
+}
+#contact-page .header {
+    padding-bottom: 60px;
+}
+#contact-page .nbr .icon-img{
+    max-width: 100px;
+}
+#contact-page .nbr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    background: transparent;
+}
+#contact-page .step_wrapper h5{
+    font-size: 25px;
+}
+#contact-page #social-links .nbr .icon-img{
+    max-width: 85px;
+}
+#social-links .small-title{
+    color: #3963AB;
+    margin-bottom: 0;
+}
+#contact-form .modal h5, #contact-form .modal-footer {
+    display: none;
+}
+#contact-form .modal-header {
+    border: 0;
+}
+#contact-form .modal-header .close {
+    position: absolute;
+    right: 1rem;
+    color: #3963ab;
+    opacity: 1;
+}
+#contact-form .modal-content{
+    border: 0;
+    border-radius: 0;
+    padding:0 3rem 3rem;
+}
+.form-header h2 {
+    font-size: 35px;
+    font-weight: 700;
+}
+.form-header p {
+    font-size: 19px;
+    font-weight: 500;
+}
+#contact-form .form{
+    padding: 5% 7%;
+}
+#contact-form .form .form-control{
+    background: #c4c4c4;
+    border-color: #c4c4c4;
+    border-radius: 0;
+    color: #1d417d;
+    font-size: 17px;
+}
+#contact-form .form .form-control:focus{
+    border-color: #8ea3c7;
+}
+#contact-form .link{
+    color: #3963ab;
+}
+#contact-form .bt_animated:before{
+    background-color: #3963ab;
+}
+#contact_form .btn{
+    max-width: 250px;
+    width: 100%;
+}
+
+@media(max-width: 768px){
+    #contact-page .step_wrapper h5 {
+        font-size: 20px;
+    }
+}
+@media(max-width: 575px){
+    #contact-page .section.inner-page {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #contact-page .nbr .icon-img {
+        max-width: 80px;
+    }
+    #contact-page #social-links .nbr .icon-img {
+        max-width: 65px;
+    }
+    #contact-form .modal-content {
+        padding: 0 1rem 1rem;
+    }
+    .form-header h2 {
+        font-size: 30px;
+    }
+    .form-header p {
+        font-size: 17px;
+    }
+}

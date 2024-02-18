@@ -1,0 +1,43 @@
+{
+  "name": "protectid",
+  "version": "1.0.0",
+  "description": "ID Protect",
+  "author": "ID Protect",
+  "private": true,
+  "scripts": {
+    "dev:app": "cd app && yarn dev && cd ..",
+    "dev:server": "cd server && yarn dev && cd ..",
+    "build:app": "cd app && yarn build && cd ..",
+    "build:server": "cd server && yarn build && cd ..",
+    "build": "yarn build:app && yarn build:server",
+    "clean:app": "cd app && rm -rf node_modules && rm -rf .nuxt && rm -rf dist && cd ..",
+    "clean:server": "cd server && rm -rf node_modules && rm -rf dist && cd ..",
+    "clean": "rm -rf node_modules && yarn clean:app && yarn clean:server",
+    "i": "yarn install && cd app && yarn install && cd ../server && yarn install && cd ..",
+    "clean-install-build": "rm -rf node_modules && yarn clean:app && yarn clean:server && yarn i && yarn build",
+    "start:app": "env-cmd -f /home/ubuntu/idprotect/env/properties.env pm2 start --only idp-app",
+    "start:server": "env-cmd -f /home/ubuntu/idprotect/env/properties.env pm2 start --only idp-server"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cookie-session": "^2.0.37",
+    "ts-loader": "^8.0.12",
+    "ts-node": "^9.1.1",
+    "tslint": "latest",
+    "typescript": "latest",
+    "webpack": "^5.11.0"
+  },
+  "dependencies": {
+    "@nuxtjs/font-awesome": "^1.0.4",
+    "@nuxtjs/toast": "^3.2.1",
+    "@types/connect-flash": "^0.0.36",
+    "babel-eslint": "^10.1.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^1.3.3",
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.16.0",
+    "eslint-plugin-vue": "^7.3.0",
+    "eslint-webpack-plugin": "^2.4.1"
+  }
+}

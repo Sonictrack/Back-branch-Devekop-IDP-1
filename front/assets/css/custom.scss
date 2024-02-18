@@ -1,0 +1,28 @@
+// Custom Bootstrap variable overrides go first
+$theme-colors: (
+  "primary": #3963AB,
+  "secondary": #BB298C,
+  "orange": #E9521D,
+  "orangeButton": #ffa563,
+  "red": #ff1111,
+  "success": #01b301,
+  "grey": #f5f5f5
+);
+
+$spacers: (
+  6: 3rem,
+  8: 3.5rem,
+  10: 4rem,
+  12: 4.5rem,
+  16: 5rem,
+  24: 7.5rem,
+  32: 10rem
+);
+
+// Then include the following
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+
+body {
+  font-family: 'Raleway'!important;
+}

@@ -1,0 +1,222 @@
+/*
+* Created by : AjiCreative
+* File: Home page styles
+*/
+
+#home .main .container-fluid{
+    padding: 0;
+    margin-top: 12px;
+}
+#header_home, #about-particular, #about-professional, #home #id-community{
+    min-height: 100vh;
+}
+#about-particular > .row, #about-professional > .row, #home #id-community > .row{
+    min-height: 100vh;
+}
+
+/* Header section */
+
+.home-title {
+    font-size: 46px;
+    line-height: 64px;
+    font-weight: bold;
+    animation-duration:1.5s
+}
+.home-small-title {
+    font-size: 35px;
+    font-weight: 200;
+    animation-duration:2s
+}
+.home-up {
+    z-index: 10;
+    position: relative;
+}
+.home-desc {
+    color: #fff;
+    font-size: 15px;
+    max-width: 600px;
+    font-weight: 200;
+}
+.home-desc p{
+    margin-bottom: 0;
+    animation-duration:2.5s
+}
+#header_home{
+    display: flex;
+    align-items: center;
+}
+#header_home .btn-bg-white{
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+#header_home .btn-bg-white img {
+    max-width: 20px;
+    margin-right: 1.5rem;
+}
+#header_home .btns-group a {
+    max-width: 200px;
+    width: 100%;
+}
+.btns-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btns-group a{
+    margin-right: 3rem;
+    animation-duration:3s
+}
+.btns-group a:last-child{
+    margin-right: 0;
+}
+.logo-lg{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.logo-lg img{
+    max-width: 370px;
+    width: 100%;
+}
+
+
+/* 01. Particuliers section*/
+
+.block-desc{
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 5% !important;
+    min-height: 600px;
+}
+.block-nbr {
+    font-size: 54px;
+    font-weight: bold;
+    color: #436aaf;
+    margin-bottom: 25px;
+}
+.block-big-title {
+    font-size: 37px;
+    color: #436aaf;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+.block-desc .inner{
+    margin-bottom: 3rem;
+}
+.block-desc .inner p{
+    font-family: 'Open Sans', sans-serif;
+    color: #3963ab;
+    line-height: 35px;
+    font-size: 30px;
+    font-weight: 300;
+}
+#about-particular .btn,
+#about-professional .btn,
+#id-community .btn{
+    min-width: 200px;
+}
+.block-details{
+    display: flex;
+    flex-wrap: wrap;
+}
+.block-details img{
+    max-width: 110px;
+}
+.top-details, .bottom-details{
+    width: 100%;
+    padding: 2rem 1rem;
+}
+#about-particular .bg-white h3, #about-particular .bg-white p{
+    color: #3963ab;
+}
+.bg-blue h3, .bg-blue p{
+    color: white;
+}
+
+
+/* 02. Professional section*/
+
+#about-professional .bg-white h3, #about-professional .bg-white p{
+    color: #BB298C;
+}
+.bg-light-pink h3, .bg-light-pink p{
+    color: white;
+}
+#about-professional .block-nbr,
+#about-professional .block-big-title,
+#about-professional .block-desc .inner p{
+    color: #bb298c;
+}
+#about-particular .bg-white h3,
+#about-professional .bg-white h3{
+    font-weight: 700;
+}
+
+
+/* ID COMMUNITY section*/
+
+#id-community img {
+    max-width: 300px;
+    width: 100%;
+}
+#id-community h3, #id-community p{
+    color: #E9521D !important;
+    font-weight: 400;
+}
+
+
+@media(max-width: 991px){
+    .home-half {
+        padding-bottom: 60px !important;
+        padding-top: 60px !important;
+    }
+    .home-desc{
+        margin: auto;
+    }
+    .btns-group {
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .block-details img {
+        max-width: 80px;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 767px) {
+    .block-desc, .block-details{
+     text-align: center;
+    }
+    .block-desc{
+        min-height: 450px;
+    }
+    #id-community {
+        text-align: center;
+    }
+    #id-community img {
+        max-width: 200px;
+        margin-bottom: 1rem;
+    }
+    #header_home, #about-particular, #about-professional, #id-community {
+        min-height: auto;
+        height: 100%;
+    }
+}
+@media(max-width: 576px){
+    .btns-group{
+        flex-direction: column;
+        max-width: 200px;
+        margin: auto;
+    }
+    .btns-group a {
+        margin-right: 0;
+    }
+    .btns-group a:last-child {
+        margin-top: 20px;
+    }
+    .logo-lg img {
+        max-width: 200px;
+    }
+}

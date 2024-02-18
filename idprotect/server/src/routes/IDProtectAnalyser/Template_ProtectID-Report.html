@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <style>
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: rgb(58, 99, 172);
+            font-family: 'Raleway';
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+		.classEmError
+		{
+		    text-align: center;
+            color: red;
+            font-family: 'Raleway';
+			font-size: 14px;
+            font-weight: bolder;
+		}
+
+		.classEmOk{
+			text-align: center;
+            color: green;
+            font-family: 'Raleway';
+			font-size: 14px;
+            font-weight: bolder;
+		}
+
+        .ClassTitle1 {
+            text-align: center;
+            color: rgb(58, 99, 172);
+            font-family: 'Raleway';
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .ClassTitle2 {
+            text-align: center;
+            color: rgb(58, 99, 172);
+            font-family: 'Raleway';
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .ClassTableHeader {
+            border: 1px solid black;
+            text-align: left;
+            color: rgb(58, 99, 172);
+            font-family: 'Raleway';
+            width: 130px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .ClassTableData {
+            border: 1px solid black;
+            text-align: left;
+            width: 250px;
+            max-width: 250px;
+            color: black;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        table {
+            border-collapse: collapse;
+            word-wrap: normal;
+            width: 800px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+            
+        table.Data {
+                border: 1px solid black;
+                border-collapse: collapse;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+        table.DocScan {                
+                text-align: center;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+           
+
+        .ClassDivIDProtectShield {
+            position: absolute;
+            width: 70px;
+            z-index: 1;
+            text-align: center;
+            left: 0px;
+            top: 0px;
+            background-color: rgb(58, 99, 172);
+        }
+
+        .ClassDivIDProtectBackground {
+            position: absolute;
+            width: 820px;
+            height: 70px;
+            z-index: 0;
+            text-align: center;
+            left: 0px;
+            top: 0px;
+            background-color: rgb(58, 99, 172);
+        }
+
+        .ClassDivIDProtectTitle {
+            position: absolute;
+            float: right;
+            width: 500px;
+            left: 160px;
+            top: 15px;
+            z-index: 2;
+            text-align: center;
+            font-family: 'Raleway';
+            font-size: 32px;
+            font-weight: bold;
+            background-color: rgb(58, 99, 172);
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ClassDivDocScan {
+            width: 800px;
+            left: 0px;
+        }
+
+        .ClassDivData {
+            width: 800px;
+            left: 0px;
+        }
+
+        .ClassDivAnalysis {
+            width: 800px;
+            left: 0px;
+        }
+
+        .ClassDivExpertise {
+            width: 800px;
+            left: 0px;
+        }
+
+        .ClassDivFooter {
+            width: 800px;
+            left: 0px;            
+        }
+
+        .ClassFooter {
+            width: 800px;
+            font-size: 12px;
+        }
+
+        .ClassDivMainDiv {
+            border: 1px solid black;
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            width: 820px;
+            max-width: 820px;
+        }
+
+        .ClassDivBadgeNonConforme {
+            position: absolute;
+            z-index: 1;
+            text-align: left;
+            left: 0px;
+            top: 120px;
+        }
+		
+		.ClassDivBadgeConforme {
+            position: absolute;
+            z-index: 2;
+            text-align: left;
+            left: 0px;
+            top: 120px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Tampon conforme / non conforme-->
+    <div class="ClassDivBadgeConforme">
+        <img style="visibility : TEMPLATE_SHIELD_DOC_OK; width : 300px; height : 300px; transform : rotate(-30deg);" src="./images/badge-conforme-vert.png">
+    </div>
+	<div class="ClassDivBadgeNonConforme">
+        <img style="visibility : TEMPLATE_SHIELD_DOC_KO; width : 300px; height : 300px; transform : rotate(-30deg);" src="./images/badge-non-conforme-rouge.png">
+    </div>
+    <div class="ClassDivIDProtectTitle">
+        <img style="visibility : visible; width : 500px; height : 40px;" src="./images/IDProtectTitleRapportDanalyse.PNG">
+    </div>
+    <div class="ClassDivIDProtectShield">
+        <img style="visibility : visible; width : 70px; height : 70px;" src="./images/IDProtectShield.png">
+    </div>
+    <div class="ClassDivIDProtectBackground">
+        <img style="visibility : visible; width : 800px; height : 70px;" src="./images/IDProtectBackground.png">
+    </div>
+
+    <div class="ClassDivMainDiv">
+
+        <div class="ClassDivDocScan">
+            <hr>
+            <h1 class="ClassTitle1">RAPPORT ID EXPERT</h1>
+            <hr>
+            <table class="DocScan">
+                <!-- Document image -->
+                <tr>
+                    <td width="50%">
+                        <img style="visibility : TEMPLATE_IMAGE_RECTO_VISIBLE; width : 300px; height : 200px;" src="data:image/jpeg;base64,TEMPLATE_IMAGE_RECTO">
+                    </td>
+                    <td width="50%">
+                        <img style="visibility : TEMPLATE_IMAGE_VERSO_VISIBLE; width : 300px; height : 200px;" src="data:image/jpeg;base64,TEMPLATE_IMAGE_VERSO">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ClassDivData">
+
+            <hr>
+            <h1 class="ClassTitle2">DONNEES</h1>
+            <hr>
+            <table class="Data">
+                <!--Line 1-->
+                <tr>
+                    <td class="ClassTableHeader">Type de Document :</td>
+                    <td class="ClassTableData">TEMPLATE_DOCUMENT_TYPE</td>
+                    <td class="ClassTableHeader">Pays :</td>
+                    <td class="ClassTableData">TEMPLATE_COUNTRY</td>
+                </tr>
+                <!--Line 2-->
+                <tr>
+                    <td class="ClassTableHeader">N° d’expertise :</td>
+                    <td class="ClassTableData">TEMPLATE_EXPERTISE_NUMBER</td>
+                    <td class="ClassTableHeader">N° de document :</td>
+                    <td class="ClassTableData">TEMPLATE_DOCUMENT_NUMBER</td>
+                </tr>
+                <!--Line 3-->
+                <tr>
+                    <td class="ClassTableHeader">Nom:</td>
+                    <td class="ClassTableData">TEMPLATE_NAME</td>
+                    <td class="ClassTableHeader">Prénom :</td>
+                    <td class="ClassTableData">TEMPLATE_FIRST_NAME</td>
+                </tr>
+                <!--Line 4-->
+                <tr>
+                    <td class="ClassTableHeader">Date d’émission :</td>
+                    <td class="ClassTableData">TEMPLATE_EMIT_DATE</td>
+                    <td class="ClassTableHeader">Date d’expiration : </td>
+                    <td class="ClassTableData">TEMPLATE_EXPIRY_DATE</td>
+                </tr>
+                <!--Line 5-->
+                <tr>
+                    <td class="ClassTableHeader">Résultat Expertise :</td>
+                    <td class="ClassTableData"><p TEMPLATE_EXPERTIZE_RESULT_STYLE>TEMPLATE_EXPERTIZE_RESULT</p></td>
+                    <td class="ClassTableHeader">Bases ID Protect :</td>
+                    <td class="ClassTableData">TEMPLATE_ID_PROTECT_BASE</td>
+                </tr>
+            </table>
+        </div>
+
+<!--
+Validité du type document 	==> MODEL_VALIDITY
+Validité du document 		==> DOC_VALIDITY
+Conformité MRZ				==> MRZ_CONFORMITY
+Validité MRZ OCR			==> MRZ_OCR_CONSISTENCY
+Validité éléments de sécurités visuels ==> DL_CONFORMITY
+-->
+
+        <div class="ClassDivAnalysis">
+            <hr>
+            <h1 class="ClassTitle2">ANALYSE</h1>
+            <hr>
+            <table class="tableData">
+                <!--Line 1-->
+                <tr>
+                    <td class="ClassTableHeader">Validité du type document :</td>
+                    <td class="ClassTableData">TEMPLATE_MODEL_VALIDITY</td>
+
+                </tr>
+                <!--Line 2-->
+                <tr>
+                    <td class="ClassTableHeader">Validité du document :</td>
+                    <td class="ClassTableData">TEMPLATE_DOC_VALIDITY</td>
+
+                </tr>
+                <!--Line 3-->
+                <tr>
+                    <td class="ClassTableHeader">Conformité MRZ :</td>
+                    <td class="ClassTableData">TEMPLATE_MRZ_CONFORMITY</td>
+
+                </tr>
+                <!--Line 4-->
+                <tr>
+                    <td class="ClassTableHeader">Validité MRZ OCR:</td>
+                    <td class="ClassTableData">TEMPLATE_MRZ_OCR_CONSISTENCY</td>
+                </tr>
+                <!--Line 5-->
+                <tr>
+                    <td class="ClassTableHeader">Validité éléments de sécurités graphiques:</td>
+                    <td class="ClassTableData">TEMPLATE_DL_CONFORMITY</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ClassDivExpertise">
+            <hr>
+            <h1 class="ClassTitle2">Expertise ID Protect</h1>
+            <hr>
+            <p>
+                TEMPLATE_RESULT_ID_PROTECT_ANALYSIS
+            </p>
+        </div>
+        <div class="ClassFooter">
+            <hr>
+            <p class="ClassFooter">PROTECT, société par action simplifiée au capital de 1 000 euros</p>
+        </div>
+    </div>
+</body>
+</html>
